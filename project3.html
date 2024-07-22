@@ -1,0 +1,62 @@
+<html>
+
+<head>
+</head>
+
+<body>
+
+<table align="center" width="30%" height="30%" border="2" cellpadding="10px" >
+
+<tr>
+	<td>Principal Amount</td>
+	<td> Rs.<input type="number" id="first"></td>
+</tr>
+
+<tr>
+	<td>Time</td>
+	<td> <input type="number" id="second">Years</td>
+</tr>
+
+<tr>
+	<td>Rate</td>
+	<td> <input type="number" id="third">%</td>
+</tr>
+
+<tr>
+	<td colspan="2" align="center"> <button onclick="simple_interest()">Calculate</button></td>
+</tr>
+
+
+<tr>
+<td colspan="2">Simple Interest is <input type="number"  id="answer"></td>	
+</tr>
+
+
+<tr>
+<td colspan="2">Total Amount is <input type="number" id="amount" placeholder="interest+principal"></td>	
+</tr>
+
+</table>
+
+<script>
+	
+	function simple_interest()
+	{
+		var p,t,r,si;
+		p=parseInt(document.getElementById("first").value);
+		t=parseInt(document.getElementById("second").value);
+		r=parseInt(document.getElementById("third").value);
+		
+		
+		si=(p*t*r)/100;
+		document.getElementById("answer").value=si;
+		
+		amount= p+si;
+		document.getElementById("amount").value=amount; 
+	}
+</script>
+
+
+</body>
+
+</html>

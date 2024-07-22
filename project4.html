@@ -1,0 +1,58 @@
+<html>
+
+<head>
+</head>
+
+<body>
+
+<table align="center" width="30%" height="30%" border="2" cellpadding="10px" >
+
+<tr>
+	<td>Principal Amount</td>
+	<td> Rs.<input id="first"></td>
+</tr>
+
+<tr>
+	<td>Time</td>
+	<td> <input id="second">Years</td>
+</tr>
+
+<tr>
+	<td>Rate</td>
+	<td> <input id="third">%</td>
+</tr>
+
+<tr>
+	<td colspan="2" align="center"> <button onclick="comp_interest()">Calculate</button></td>
+</tr>
+
+<tr>
+<td colspan="2">Total Amount is <input id="amount"></td>	
+</tr>
+
+<tr>
+<td colspan="2">Compund Interest is <input placeholder="amount-principal" id="answer"></td>	
+</tr>
+</table>
+
+<script>
+	
+	function comp_interest()
+	{
+		var p,t,r,ci;
+		p=document.getElementById("first").value;
+		t=document.getElementById("second").value;
+		r=document.getElementById("third").value;
+		
+		amount=p*Math.pow((1+r/100),t);
+		document.getElementById("amount").value=amount;
+		
+		ci=amount-p;
+		document.getElementById("answer").value=ci;
+	}
+</script>
+
+
+</body>
+
+</html>

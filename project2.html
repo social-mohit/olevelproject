@@ -1,0 +1,33 @@
+<html>
+
+<head>
+</head>
+
+<body>
+
+<table border="2" cellpadding="10px" align="center">
+	<tr> <th colspan="4" align="center">ALL IN ONE CALCULATOR</th></tr>
+	<tr> <td colspan="2">First Number</td> <td colspan="2"><input id="num1"></td> </tr>
+	<tr> <td colspan="2">Second Number</td> <td colspan="2"><input id="num2"> </td> </tr>
+	<tr> <td colspan="4"> <button onclick="arith()">FIND</button> </td> </tr>
+	<tr> <td colspan="4" id="result">  </td> </tr>
+	
+</table>
+
+<script>
+	
+	function arith()
+	{
+		let a=parseInt(document.getElementById("num1").value);
+		let b=parseInt(document.getElementById("num2").value);
+		
+		document.getElementById("result").innerHTML="> Addition: "+(a+b)+ "<br>" +
+													"> Multiplication: "+(a*b)+ "<br>" +
+													"> Subtraction: "+(a-b)+ "<br>" +
+													"> Division: "+(a/b)+ "<br>" +
+													"> Modulus: "+(a%b)
+	}
+</script>
+
+</body>
+</html>
